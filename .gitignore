@@ -1,0 +1,4 @@
+Arduino_Compile
+*.hex
+*.o
+*.elf
