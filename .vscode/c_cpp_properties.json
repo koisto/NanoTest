@@ -10,7 +10,8 @@
             ],
             "defines": [
                 "MCU=atmega328p",
-                "__AVR_ATmega328P__"
+                "__AVR_ATmega328P__",
+                "F_CPU=16000000"
             ],
             "compilerPath": "/usr/bin/avr-gcc",
 
