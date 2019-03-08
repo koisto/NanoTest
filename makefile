@@ -47,9 +47,9 @@ $(BUILD_DIR)/%.o : %.c
 
 .PHONY : clean
 clean :
-	@rm $(BIN).elf $(BIN).hex $(OBJ) $(DEP)
+	-@rm -rf $(BIN).elf $(BIN).hex $(OBJ) $(DEP) 2>/dev/null || true
 
 .PHONY : install
 install :
-	avrdude -v -patmega328p -carduino -P/dev/ttyUSB0 -b57600 -D -Uflash:w:$(BIN).hex:i 
+	avrdude -patmega328p -carduino -P/dev/ttyUSB0 -b57600 -D -Uflash:w:$(BIN).hex:i 
 	
